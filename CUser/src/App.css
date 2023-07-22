@@ -1,0 +1,149 @@
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  margin-bottom: 5rem;
+  margin-top: 10rem;
+}
+
+.create-user {
+  position: fixed;
+  transform: rotate(-90deg);
+  top: 50%;
+  border: 0;
+  background-color: #F45050;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  left: -43px;
+}
+
+.no-users {
+  font-size: 50px;
+  font-weight: bold;
+  opacity: 20%;
+  color: #ccc;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select:none;
+}
+
+@media (max-width: 500px) {
+  .no-users {
+      font-size: 2.8rem;
+  }
+}
+
+/* Navbar */
+
+.navbar {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed #B0DAFF;
+  margin-bottom: 5rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255,0.9);
+  z-index: 10000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  margin: 0;
+  color: #19376D;
+  cursor:pointer;
+  user-select: none;
+}
+
+.navbar-counter {
+  margin: 0;
+}
+
+@media (max-width: 375px) {
+  .navbar-logo {
+      font-size: 2.5rem;
+  }
+}
+
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    background-color: rgba(153, 153, 153, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer a {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+}
+
+/* User LIst */
+
+.userList-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 5rem 1rem;
+}
+
+.card-inner {
+  /* border: 1px solid; */
+  width: 250px;
+  text-align: center;
+  padding: 0.8rem 0.5rem;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  transition: transform 0.2s;
+}
+
+.card-inner:hover {
+  transform: scale(1.05) rotate(-5deg);
+  -webkit-box-shadow: 4px 4px 12px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 12px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 12px 0px rgba(34, 60, 80, 0.2);
+}
+
+.card-inner img {
+  width: 150px;
+  height: 150px;
+  border-radius:50%;
+  object-fit: cover;
+}
+
+.card-inner button {
+  border: 0;
+  font-family: inherit;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+@media (max-width:907px) {
+  .card-inner {
+      width: 100%;
+  }
+}
