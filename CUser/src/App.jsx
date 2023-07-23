@@ -3,88 +3,20 @@ import './App.css'
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 import UserList from './components/userlist/userList'
+import NewUserForm from './components/newuser/NewUserForm'
 
 function App() {
-  const [users, setUsers] = useState([{
-    firstName: "Otabek",
-    lastName: "Khalimov",
-    age: 20,
-    from: 'Uzbekistan',
-    image:'https://picsum.photos/400/600?random=1',
-    job: 'dev',
-    gender: 'MAALE',
-    id: 1
-  },
-  {
-    firstName: "Otabek",
-    lastName: "Khalimov",
-    age: 20,
-    from: 'Uzbekistan',
-    image:'https://picsum.photos/400/600?random=2',
-    job: 'dev',
-    gender: 'MAALE',
-    id: 2
-  },
-  {
-    firstName: "Otabek",
-    lastName: "Khalimov",
-    age: 20,
-    from: 'Uzbekistan',
-    image:'https://picsum.photos/400/600?random=3',
-    job: 'dev',
-    gender: 'MAALE',
-    id: 3
-  },
-  {
-    firstName: "Otabek",
-    lastName: "Khalimov",
-    age: 20,
-    from: 'Uzbekistan',
-    image:'https://picsum.photos/400/600?random=4',
-    job: 'dev',
-    gender: 'MAALE',
-    id: 4
-  },
-  {
-    firstName: "Otabek",
-    lastName: "Khalimov",
-    age: 20,
-    from: 'Uzbekistan',
-    image:'https://picsum.photos/400/600?random=5',
-    job: 'dev',
-    gender: 'MAALE',
-    id: 5
-  },
-  {
-    firstName: "Otabek",
-    lastName: "Khalimov",
-    age: 20,
-    from: 'Uzbekistan',
-    image:'https://picsum.photos/400/600?random=6',
-    job: 'dev',
-    gender: 'MAALE',
-    id: 99
-  },  {
-    firstName: "Otabek",
-    lastName: "Khalimov",
-    age: 20,
-    from: 'Uzbekistan',
-    image:'https://picsum.photos/400/600?random=7',
-    job: 'dev',
-    gender: 'MAALE',
-    id: 6
-  },
-  {
-    firstName: "Otabek",
-    lastName: "Khalimov",
-    age: 20,
-    from: 'Uzbekistan',
-    image:'https://picsum.photos/400/600?random=8',
-    job: 'dev',
-    gender: 'MAALE',
-    id: 14
-  }
-
+  const [users, setUsers] = useState([
+  //   {
+  //   firstName: "Otabek",
+  //   lastName: "Khalimov",
+  //   age: 20,
+  //   from: 'Uzbekistan',
+  //   image:'https://picsum.photos/400/600?random=1',
+  //   job: 'dev',
+  //   gender: 'MAALE',
+  //   id: 1
+  // },
 ])
 
 // delete 
@@ -108,7 +40,10 @@ setUsers ((prev)=>{
 
       <UserList  users = {users}  userDelete= {userDelete}/>
     </main>
-
+    <button className="create-user">
+    Create User
+    </button>
+      <NewUserForm/>
     <Footer/>
   </div>
   )
